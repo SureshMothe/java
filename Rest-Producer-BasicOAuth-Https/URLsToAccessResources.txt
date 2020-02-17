@@ -1,0 +1,34 @@
+POST::::http://localhost:2020/userapi/oauth/token?grant_type=password&scope=read,write&username=user&password=17dd6c39-bf83-4f40-ae93-493c9421a5dd
+
+UserName ::: client_id
+Password ::: client_secret
+{
+    "access_token": "788e2ece-38c2-4889-8e5c-624fcf55a54a",
+    "token_type": "bearer",
+    "refresh_token": "e858aeb8-0fcd-4c02-af3d-6109039a62c0",
+    "expires_in": 43199,
+    "scope": "read,write"
+}
+
+GET:::http://localhost:2020/userapi/users/all?access_token=788e2ece-38c2-4889-8e5c-624fcf55a54a
+
+[
+    {
+        "id": 101,
+        "name": "krishna",
+        "emailId": "krishna@gmail.com",
+        "mobileNo": 9030470287
+    },
+    {
+        "id": 202,
+        "name": "Mohan",
+        "emailId": "mohan@gmail.com",
+        "mobileNo": 7829839383
+    },
+    {
+        "id": 203,
+        "name": "Bihaei",
+        "emailId": "Bihari@gmail.com",
+        "mobileNo": 7829839383
+    }
+]
