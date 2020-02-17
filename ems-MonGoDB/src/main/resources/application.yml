@@ -1,0 +1,17 @@
+server:
+  port: 4545
+  
+  servlet:
+    context-path: /mongo
+    
+    
+spring:
+  data:
+    mongodb:
+      host: localhost 
+      port: 27017
+      database: ems
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
