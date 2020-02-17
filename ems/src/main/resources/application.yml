@@ -1,0 +1,24 @@
+server:
+  port: 4141
+  
+  servlet:
+    context-path: /ems
+    
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot
+    username: root
+    password: root
+    
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    
