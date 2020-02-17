@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ZuulProxy
+    
+server:
+  port: 3333
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2222/eureka/
+    
+#Routing Properties
+
+#1.http://localhost:3333/call/CallDetails/getCallDetails/90304702
+zuul:
+  routes:
+    first:
+      path: /call/**
+      service-id: CALLDETAILS
+    second:
+      path: /cust/**
+      service-id: CUSTOMER
+    third:
+      path: /friend/**
+      service-id: FRIEND
+    forth:
+      path: /plan/**
+      service-id: PLANDETAILS
+    
+
+
+      
+      
