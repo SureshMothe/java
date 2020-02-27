@@ -41,7 +41,6 @@ public class Trainer {
 		}
 		course.add(course1);
 		course1.setTrainer(this);
-
 	}
 
 	public List<Course> getCourse() {
